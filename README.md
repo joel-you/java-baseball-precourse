@@ -5,3 +5,12 @@
 
 ## 과제 제출 과정
 * [과제 제출 방법](https://github.com/next-step/nextstep-docs/tree/master/precourse)
+
+***
+### 기능 구현 목록
+* 도메인 설계
+  * [x] ComputerNumber
+  * [x] UserNumber
+  * [x] GameStatus
+* [x] ComputerNumber 랜덤 세팅
+* [x] UserNumber input으로 세팅
