@@ -12,9 +12,6 @@ public class ComputerNumber {
     private static final int MAX = 9;
     private List<Integer> number;
 
-    public ComputerNumber(List<Integer> number) {
-        this.number = number;
-    }
 
     public void setNumber() {
         // 순서보장를 보장해주는 Set = LinkedHashSet.
@@ -25,4 +22,7 @@ public class ComputerNumber {
         this.number = new ArrayList<>(numberSet);
     }
 
+    public List<Integer> getNumber() {
+        return number;
+    }
 }
