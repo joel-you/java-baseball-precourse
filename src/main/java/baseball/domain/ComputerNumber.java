@@ -8,10 +8,12 @@ import java.util.List;
 import java.util.Set;
 
 public class ComputerNumber {
-    private static final int MIN = 1;
-    private static final int MAX = 9;
-    private List<Integer> number;
 
+    private static final int MIN = 1;
+
+    private static final int MAX = 9;
+
+    private List<Integer> number;
 
     public void setNumber() {
         // 순서보장를 보장해주는 Set = LinkedHashSet.
