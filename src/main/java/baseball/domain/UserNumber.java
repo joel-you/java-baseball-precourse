@@ -1,9 +1,7 @@
 package baseball.domain;
 
 import java.util.ArrayList;
-import java.util.LinkedHashSet;
 import java.util.List;
-import java.util.Set;
 
 public class UserNumber {
 
@@ -14,7 +12,7 @@ public class UserNumber {
             throw new IllegalArgumentException("Invalid Request");
         }
 
-        Set<Integer> numberSet = new LinkedHashSet<>();
+        List<Integer> numberSet = new ArrayList<>();
         for (String s: inputStr.split("")) {
             numberSet.add(Integer.valueOf(s));
         }
