@@ -15,6 +15,12 @@ public class ComputerNumber {
 
     private List<Integer> number;
 
+    public ComputerNumber(List<Integer> number) {
+        this.number = number;
+    }
+
+    public ComputerNumber() {}
+
     public void setNumber() {
         // 순서보장를 보장해주는 Set = LinkedHashSet.
         Set<Integer> numberSet = new LinkedHashSet<>();

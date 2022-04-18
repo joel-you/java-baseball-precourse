@@ -2,8 +2,11 @@ package baseball.domain;
 
 import java.util.List;
 
+import static baseball.core.Constant.*;
+
 public class GameStatus {
     private int strike;
+
     private int ball;
 
     public GameStatus(int strike, int ball) {
@@ -16,9 +19,9 @@ public class GameStatus {
         this.ball = 0;
     }
 
-    public GameStatus isGameStatus(List<Integer> computerNumber, List<Integer> userNumber) {
-        for (int i=0; i<computerNumber.size(); i++) {
-            isCompare(userNumber, i, computerNumber.get(i));
+    public GameStatus isGameStatus(ComputerNumber computerNumber, UserNumber userNumber) {
+        for (int i=0; i<computerNumber.getNumber().size(); i++) {
+            isCompare(userNumber.getNumber(), i, computerNumber.getNumber().get(i));
         }
         return new GameStatus(this.strike, this.ball);
     }
@@ -50,15 +53,15 @@ public class GameStatus {
     public String getResult() {
         StringBuilder sb = new StringBuilder();
         if (isNothing()) {
-            sb.append("낫싱");
-        }
-
-        if (this.strike != 0) {
-            sb.append(this.strike + "스트라이크 ");
+            sb.append(NOT_THING);
         }
 
         if (this.ball != 0) {
-            sb.append(this.ball + "볼");
+            sb.append(this.ball + BALL);
+        }
+
+        if (this.strike != 0) {
+            sb.append(this.strike + STRIKE);
         }
         return sb.toString();
     }
