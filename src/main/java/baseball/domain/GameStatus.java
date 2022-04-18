@@ -55,11 +55,9 @@ public class GameStatus {
         if (isNothing()) {
             sb.append(NOT_THING);
         }
-
         if (this.ball != 0) {
             sb.append(this.ball + BALL);
         }
-
         if (this.strike != 0) {
             sb.append(this.strike + STRIKE);
         }
